@@ -1,0 +1,23 @@
+<p>RXJS Test</p>
+<div class="container">
+<div>
+<input #textinputelement type="text" [(ngModel)]="textinput">
+<p>{{textinput}}</p>
+</div>
+
+<div>
+<input #textinputelement2 type="text" [(ngModel)]="textinput2"> 
+<p>{{textinput2}}</p>
+</div>
+  </div>
+
+  <div class="auto-grow">
+  <p>{{dropdownvalue}}</p>
+<mat-select [(ngModel)]="dropdownvalue"  #dropdownelement  (selectionChange)="onFoodSelection($event)" >
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+  </div>
+
+
